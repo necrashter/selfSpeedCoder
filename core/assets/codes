@@ -1,0 +1,13 @@
+final CodeSpeed codeSpeed;
+private final TextField textField;
+Stage stage;
+private Label[] labels;
+private final int bufferSize = 8;
+private CodeProcessor gameLogic;
+private long lastAdded;
+textField = new TextField("",codeSpeed.skin);
+textField.setPosition(0,0);
+textField.setWidth(Gdx.graphics.getWidth());
+if(keycode == Input.Keys.ENTER){
+submitText(textField.getText());
+textField.setText("");

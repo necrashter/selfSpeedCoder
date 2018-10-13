@@ -1,0 +1,390 @@
+{
+com.badlogic.gdx.graphics.g2d.BitmapFont: {
+	inconsolata20: {
+		file: "inconsolata20.fnt"
+	}
+	inconsolata24: {
+		file: "inconsolata24.fnt"
+	}
+	inconsolata32Bold: {
+		file: "inconsolata32Bold.fnt"
+	}
+}
+com.badlogic.gdx.graphics.Color: {
+	color: {
+		r: 0.14117648
+		g: 1
+		b: 0.09019608
+		a: 1
+	}
+	RGBA_191_191_191_255: {
+		r: 0.75
+		g: 0.75
+		b: 0.75
+		a: 1
+	}
+	selected: {
+		r: 0.3
+		g: 1
+		b: 0.3
+		a: 1
+	}
+	text-selected: {
+		r: 0.76862746
+		g: 1
+		b: 0.7490196
+		a: 1
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Skin$TintedDrawable: {
+	button-over-c: {
+		name: button-over
+		color: color
+	}
+	button-pressed-c: {
+		name: button-pressed
+		color: color
+	}
+	checkbox-pressed-c: {
+		name: checkbox-pressed
+		color: color
+	}
+	checkbox-c: {
+		name: checkbox
+		color: color
+	}
+	checkbox-over-c: {
+		name: checkbox-over
+		color: color
+	}
+	radio-c: {
+		name: radio
+		color: color
+	}
+	radio-pressed-c: {
+		name: radio-pressed
+		color: color
+	}
+	radio-over-c: {
+		name: radio-over
+		color: color
+	}
+	color: {
+		name: white
+		color: color
+	}
+	list-c: {
+		name: list
+		color: color
+	}
+	slider-c: {
+		name: slider
+		color: color
+	}
+	progress-bar-c: {
+		name: progress-bar
+		color: color
+	}
+	progress-bar-knob-c: {
+		name: progress-bar-knob
+		color: color
+	}
+	progress-bar-vertical-c: {
+		name: progress-bar-vertical
+		color: color
+	}
+	progress-bar-vertical-knob-c: {
+		name: progress-bar-vertical-knob
+		color: color
+	}
+	scroll-horizontal-c: {
+		name: scroll-horizontal
+		color: color
+	}
+	scroll-vertical-c: {
+		name: scroll-vertical
+		color: color
+	}
+	select-box-c: {
+		name: select-box
+		color: color
+	}
+	select-box-over-c: {
+		name: select-box-over
+		color: color
+	}
+	select-box-pressed-c: {
+		name: select-box-pressed
+		color: color
+	}
+	slider-before-c: {
+		name: slider-before
+		color: color
+	}
+	slider-knob-c: {
+		name: slider-knob
+		color: color
+	}
+	slider-knob-pressed-c: {
+		name: slider-knob-pressed
+		color: color
+	}
+	slider-vertical-c: {
+		name: slider-vertical
+		color: color
+	}
+	slider-vertical-before-c: {
+		name: slider-vertical-before
+		color: color
+	}
+	split-pane-horizontal-c: {
+		name: split-pane-horizontal
+		color: color
+	}
+	split-pane-vertical-c: {
+		name: split-pane-vertical
+		color: color
+	}
+	selected: {
+		name: white
+		color: selected
+	}
+	textfield-c: {
+		name: textfield
+		color: color
+	}
+	textfield-login-c: {
+		name: textfield-login
+		color: color
+	}
+	textfield-selected-c: {
+		name: textfield-selected
+		color: color
+	}
+	textfield-login-selected-c: {
+		name: textfield-login-selected
+		color: color
+	}
+	textfield-password-c: {
+		name: textfield-password
+		color: color
+	}
+	textfield-password-selected-c: {
+		name: textfield-password-selected
+		color: color
+	}
+	tooltip-c: {
+		name: tooltip
+		color: color
+	}
+	touchpad-c: {
+		name: touchpad
+		color: color
+	}
+	touchpad-knob-c: {
+		name: touchpad-knob
+		color: color
+	}
+	plus-c: {
+		name: plus
+		color: color
+	}
+	minus-c: {
+		name: minus
+		color: color
+	}
+	checkbox-pressed-over-c: {
+		name: checkbox-pressed-over
+		color: color
+	}
+	progress-bar-big-c: {
+		name: progress-bar-big
+		color: color
+	}
+	progress-bar-big-knob-c: {
+		name: progress-bar-big-knob
+		color: color
+	}
+	color2: {
+		name: white
+		color: RGBA_191_191_191_255
+	}
+	windowg: {
+		name: window
+		color: {
+			r: 0.08106667
+			g: 0.50666666
+			b: 0.12963238
+			a: 1
+		}
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
+	default: {
+		down: button-pressed-c
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.CheckBox$CheckBoxStyle: {
+	default: {
+		checkboxOn: checkbox-pressed-c
+		checkboxOff: checkbox-c
+		checkboxOver: checkbox-over-c
+		font: inconsolata20
+		fontColor: color
+		downFontColor: text-selected
+		checkedFontColor: text-selected
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle: {
+	default: {
+		font: inconsolata20
+		fontColor: color
+	}
+	medium: {
+		font: inconsolata24
+		fontColor: color
+	}
+	lightWhite: {
+		font: inconsolata20
+		fontColor: RGBA_191_191_191_255
+	}
+	mediumWhite: {
+		font: inconsolata24
+		fontColor: RGBA_191_191_191_255
+	}
+	caption: {
+		font: inconsolata32Bold
+		fontColor: color
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.List$ListStyle: {
+	default: {
+		font: inconsolata20
+		fontColorSelected: selected
+		fontColorUnselected: color
+		selection: color
+		background: list-c
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.ProgressBar$ProgressBarStyle: {
+	default-horizontal: {
+		background: progress-bar-c
+		knobBefore: progress-bar-knob-c
+	}
+	default-vertical: {
+		background: progress-bar-vertical-c
+		knobBefore: progress-bar-vertical-knob-c
+	}
+	big: {
+		background: progress-bar-big-c
+		knobBefore: progress-bar-big-knob-c
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.ScrollPane$ScrollPaneStyle: {
+	default: {
+		hScrollKnob: scroll-horizontal-c
+		vScrollKnob: scroll-vertical-c
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.SelectBox$SelectBoxStyle: {
+	default: {
+		font: inconsolata20
+		fontColor: color
+		background: select-box-c
+		scrollStyle: default
+		listStyle: default
+		backgroundOver: select-box-over-c
+		backgroundOpen: select-box-pressed-c
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Slider$SliderStyle: {
+	default-horizontal: {
+		knobOver: slider-knob-pressed-c
+		knobDown: slider-knob-pressed-c
+		background: slider-c
+		knob: slider-knob-pressed-c
+		knobBefore: slider-before-c
+	}
+	default-vertical: {
+		knobOver: slider-knob-pressed-c
+		knobDown: slider-knob-pressed-c
+		background: slider-vertical-c
+		knob: slider-knob-pressed-c
+		knobBefore: slider-vertical-before-c
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.SplitPane$SplitPaneStyle: {
+	default-horizontal: {
+		handle: split-pane-horizontal-c
+	}
+	default-vertical: {
+		handle: split-pane-vertical-c
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.TextButton$TextButtonStyle: {
+	default: {
+		font: inconsolata20
+		fontColor: color
+		downFontColor: selected
+		overFontColor: text-selected
+	}
+	medium: {
+		font: inconsolata24
+		fontColor: color
+		downFontColor: selected
+		overFontColor: text-selected
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.TextField$TextFieldStyle: {
+	default: {
+		font: inconsolata20
+		fontColor: color
+		background: textfield-c
+		focusedBackground: textfield-selected-c
+		cursor: color
+		selection: selected
+	}
+	light: {
+		font: inconsolata20
+		fontColor: RGBA_191_191_191_255
+		background: textfield
+		focusedBackground: textfield-selected
+		cursor: color2
+		selection: selected
+	}
+	big: {
+		font: inconsolata24
+		fontColor: color
+		background: textfield-c
+		focusedBackground: textfield-selected-c
+		cursor: color
+		selection: selected
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.TextTooltip$TextTooltipStyle: {
+	default: {
+		label: default
+		background: tooltip-c
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Touchpad$TouchpadStyle: {
+	default: {
+		background: touchpad-c
+		knob: touchpad-knob-c
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Tree$TreeStyle: {
+	default: {
+		plus: plus-c
+		minus: minus-c
+		selection: selected
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Window$WindowStyle: {
+	default: {
+		background: windowg
+		titleFont: inconsolata32Bold
+		titleFontColor: text-selected
+	}
+}
+}
