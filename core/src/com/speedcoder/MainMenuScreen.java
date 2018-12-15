@@ -107,6 +107,7 @@ public class MainMenuScreen implements Screen {
 
 
         stage.addActor(table);
+
     }
 
     @Override
@@ -114,22 +115,25 @@ public class MainMenuScreen implements Screen {
 
     }
 
+
     @Override
     public void render(float delta) {
         Gdx.gl.glClearColor(0, 0, 0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-
         stage.act(delta);
 
-        stage.draw();
+        codeSpeed.shaderController.drawShader(stage);
     }
 
     @Override
-    public void resize(int width, int height) {
+    public void resize(int widtho, int heighto) {
+        int width=widtho,height=heighto;
+        if(heighto>600){width=(600*widtho)/heighto;height=600;}
         textField.setWidth(width);
         stage.getViewport().setWorldSize(width,height);
         stage.getViewport().setScreenSize(width,height);
-        stage.getViewport().update(width,height,true);
+        stage.getViewport().update(widtho,heighto,true);
+        codeSpeed.shaderController.resize(width,height);
     }
 
     @Override

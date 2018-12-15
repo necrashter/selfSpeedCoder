@@ -16,6 +16,8 @@ import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.TimeUtils;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
 
+import static com.badlogic.gdx.scenes.scene2d.ui.TextField.keyRepeatTime;
+
 /**
  * Created by ilker on 09.08.2018.
  */
@@ -35,6 +37,7 @@ public class GameScreen implements Screen {
     private long lastAdded;
     private long lastEntered;
     private long gameStarted = 0;
+
     private boolean isGameOver = false;
     private boolean isGameStarted = false;
 
@@ -119,19 +122,22 @@ public class GameScreen implements Screen {
         stage.addActor(childTable);
 
         //stage.setDebugAll(true);
+
+        stage.getBatch().setShader(codeSpeed.shader);
     }
 
     private void submitText(String text) {
         if(!isGameStarted && text.equals("start")){
             startGame();
+            return;
         }
         for(Label l :labels){
             String s = l.getText().toString();
             if(s.length()==0 || s.charAt(0)== '/')continue;
-            if(s.equals(text)){
+            if(s.replaceAll(" ","").equals(text.replaceAll(" ",""))){
                 l.setText("");
-                double charsPerMin = 60000*s.length()/(double)(TimeUtils.millis()-lastEntered);
-                meter.setText("CPM: "+ charsPerMin);
+                //double charsPerMin = 60000*s.length()/(double)(TimeUtils.millis()-lastEntered);
+                //meter.setText("CPM: "+ charsPerMin);
                 lastEntered=TimeUtils.millis();
                 ++gameLogic.correctLines;
                 checkIfEmpty();
@@ -143,6 +149,7 @@ public class GameScreen implements Screen {
     }
 
     private void startGame() {
+        for(Label l: labels)l.setText("");
         lastAdded = TimeUtils.millis();
         lastEntered = lastAdded;
         addNewCode();
@@ -167,12 +174,14 @@ public class GameScreen implements Screen {
     public void render(float delta) {
         Gdx.gl.glClearColor(0, 0, 0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-
         stage.act(delta);
 
+        codeSpeed.shaderController.drawShader(stage);
         stage.draw();
 
         if(!isGameOver && isGameStarted) {
+            meter.setText(String.format("CPM: %.2f",60000.0f*gameLogic.keysTyped/(double)(TimeUtils.millis() - gameStarted)));
+            
             int elapsedTime = (int) (TimeUtils.millis() - lastAdded);
             nextCodeBar.setText(String.format("Next Code: %.2f%%", 100 * elapsedTime / (float) gameLogic.getDelay()));
             if (elapsedTime > gameLogic.getDelay()) {
@@ -206,11 +215,14 @@ public class GameScreen implements Screen {
     }
 
     @Override
-    public void resize(int width, int height) {
+    public void resize(int widtho, int heighto) {
+        int width=widtho,height=heighto;
+        if(heighto>600){width=(600*widtho)/heighto;height=600;}
         textField.setWidth(width);
         stage.getViewport().setWorldSize(width,height);
         stage.getViewport().setScreenSize(width,height);
-        stage.getViewport().update(width,height,true);
+        stage.getViewport().update(widtho,heighto,true);
+        codeSpeed.shaderController.resize(width, height);
     }
 
     @Override
