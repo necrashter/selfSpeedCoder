@@ -109,7 +109,7 @@ public class ShaderController {
     }
 
     public void resize(int width, int height) {
-        System.out.println(String.format("Resized %d,%d",width,height));
+        //System.out.println(String.format("Resized %d,%d",width,height));
         this.width = width; this.height= height;
         codeSpeed.shader.begin();
         codeSpeed.shader.setUniformf("u_resolution",(float)width,(float)height);
