@@ -240,7 +240,10 @@ com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle: {
 	default: {
 		font: inconsolata20
 		fontColor: color
-	}
+	},
+	colorless: {
+		font: inconsolata20
+	},
 	medium: {
 		font: inconsolata24
 		fontColor: color
@@ -283,8 +286,6 @@ com.badlogic.gdx.scenes.scene2d.ui.ProgressBar$ProgressBarStyle: {
 }
 com.badlogic.gdx.scenes.scene2d.ui.ScrollPane$ScrollPaneStyle: {
 	default: {
-		hScrollKnob: scroll-horizontal-c
-		vScrollKnob: scroll-vertical-c
 	}
 }
 com.badlogic.gdx.scenes.scene2d.ui.SelectBox$SelectBoxStyle: {

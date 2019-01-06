@@ -180,7 +180,7 @@ public class GameScreen implements Screen {
 
         if(!isGameOver && isGameStarted) {
             meter.setText(String.format("CPM: %.2f",60000.0f*gameLogic.keysTyped/(double)(TimeUtils.millis() - gameStarted)));
-            
+
             int elapsedTime = (int) (TimeUtils.millis() - lastAdded);
             nextCodeBar.setText(String.format("Next Code: %.2f%%", 100 * elapsedTime / (float) gameLogic.getDelay()));
             if (elapsedTime > gameLogic.getDelay()) {

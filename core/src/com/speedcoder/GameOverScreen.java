@@ -240,7 +240,7 @@ public class GameOverScreen implements Screen {
 
         codeSpeed.shaderController.drawShader(stage);
 
-        stage.draw();
+        //stage.draw();
     }
 
     @Override

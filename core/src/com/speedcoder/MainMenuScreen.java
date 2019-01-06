@@ -107,6 +107,7 @@ public class MainMenuScreen implements Screen {
 
 
         stage.addActor(table);
+        codeSpeed.shaderController.resize(width,height);
 
     }
 
@@ -127,13 +128,6 @@ public class MainMenuScreen implements Screen {
 
     @Override
     public void resize(int widtho, int heighto) {
-        int width=widtho,height=heighto;
-        if(heighto>600){width=(600*widtho)/heighto;height=600;}
-        textField.setWidth(width);
-        stage.getViewport().setWorldSize(width,height);
-        stage.getViewport().setScreenSize(width,height);
-        stage.getViewport().update(widtho,heighto,true);
-        codeSpeed.shaderController.resize(width,height);
     }
 
     @Override
